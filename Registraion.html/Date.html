@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Validation Example</title>
+</head>
+<body>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob">
+<button onclick="validateAge()">Validate Age</button>
+<p id="result"></p>
+
+<script>
+function validateAge() {
+  // Get the value from the date of birth input field
+  var dob = document.getElementById("dob").value;
+
+  // Create a Date object from the entered date of birth
+  var birthDate = new Date(dob);
+
+  // Get the current date
+  var currentDate = new Date();
+
+  // Calculate the age
+  var age = currentDate.getFullYear() - birthDate.getFullYear();
+
+  // Check if the birthday has occurred this year
+//   if (currentDate.getMonth() < birthDate.getMonth() || 
+//       (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
+//     age--;
+//   }
+
+  // Display the result
+  var resultElement = document.getElementById('result');
+  resultElement.textContent = (age >= 0) ? 'Valid age: ' + age + ' years' : 'Invalid age';
+}
+</script>
+
+</body>
+</html>

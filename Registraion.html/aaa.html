@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Name Validation Example</title>
+    <style>
+        .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <form id="nameForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="nameError" class="error-message"></div>
+        <button type="button" onclick="validateName()">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+    <script>
+        function validateName() {
+    // Get the input element and error message div
+    var nameInput = document.getElementById('name');
+    var nameError = document.getElementById('nameError');
+
+    // Get the entered name
+    var enteredName = nameInput.value.trim();
+
+    // Your validation logic (replace this with your actual validation rules)
+    if (enteredName === '') {
+        nameError.textContent = 'Name cannot be empty.';
+        nameInput.style.borderColor = 'red';
+    } else {
+        nameError.textContent = ''; // Clear the error message
+        nameInput.style.borderColor = ''; // Reset border color
+    }
+    }
+
+    </script>
+</body>
+</html>

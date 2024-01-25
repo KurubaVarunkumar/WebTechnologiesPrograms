@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Static vs. Absolute Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .static-box {
+            border: 2px solid #3498db;
+            padding: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            border: 2px solid #e74c3c;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Position: Static vs. Absolute Example</h1>
+    </header>
+
+    <section>
+        <p>This is an example illustrating <code>position: static;</code> and <code>position: absolute;</code></p>
+        <div class="static-box">
+            <p>This box has the default position value (static), so it appears in the normal flow of the document.</p>
+        </div>
+        <div class="absolute-box">
+            <p>This box has <code>position: absolute;</code>, so it is positioned relative to its nearest positioned ancestor (or the initial containing block if there is none).</p>
+        </div>
+        <p>Other content in the normal flow...</p>
+    </section>
+
+</body>
+</html>

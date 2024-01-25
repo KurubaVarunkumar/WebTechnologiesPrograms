@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>
+            Events
+        </title>
+       
+        <style>
+            *{  font-size: 18px;
+                
+            }
+            #clickEvent{
+                border:2px solid ;
+                height: 150px;
+                width: auto;
+                background-color: bisque;
+                justify-content: center;
+                position: relative;
+            }
+            #myButton{
+                height: 40px;
+                width: 100px;
+                background-color: rgb(98, 192, 169);
+            }
+            #myButton:hover{
+                background-color: rgb(129, 223, 36);
+            }
+             #mouseEvents{
+                border:2px solid ;
+                height: 500px;
+                width: auto;
+                background-color: bisque;
+               
+            }
+            #MyMouseOver {
+            width: 200px;
+            height: 100px;
+            background-color: #e0e0e0;
+            line-height: 100px;
+        }
+        #myMouseOut {
+            width: 200px;
+            height: 100px;
+            background-color: #e0e0e0;
+            line-height: 100px;
+        }
+        #keyEvents{
+            border:2px solid;
+            height:250px;
+            width: auto;
+            background-color: bisque;
+        }
+        #myForm{
+            border:2px solid;
+            height:400px;
+            width: auto;
+            background-color: bisque;
+            padding: 5px;
+        }
+        #onchange{
+            border:2px solid;
+            height:300px;
+            width: auto;
+            background-color: bisque;
+            padding: 5px;
+        }
+        </style>
+         
+    </head>
+    <body>
+        <h2>Events</h2>
+        <dd>Events are actions that happends in the web brower. Whenever we defined any events to the buttons . 
+            that buttons will performed according to the what we given event to that button
+        </dd>
+        <dd>here we have some events
+            
+        </dd>
+        <div id="clickEvent">
+            <h2>Click Event</h2>
+            <dd>Click event is triggered when a mouse button is pressed and releaded on an element </dd>
+            <button id="myButton">Click me!</button>
+        </div>
+        <div id="mouseEvents">
+            <h2>MouseEvents</h2>
+            <dd>
+                Mouse events are such events it will perfrom some actions.In mouse events, we have two type
+            </dd>
+            <dd>1.Onmouseover and 2.OnmouseOut events</dd>
+            <div id="mouseover">
+                <h2>Mouse Over Event</h2>
+                <dd>Certain action will be performed when our mouse or curser comes over the element</dd>
+                <div id="MyMouseOver">Hover over me</div>
+                
+            </div>
+            <div>
+                <h3>Mouse out Event</h3>
+                <dd>
+                    certain action will perfomed when our mouse or curser out the element
+                </dd>
+                <div id="myMouseOut">Hover and do mouse out</div>
+            </div>
+        </div>
+        <div id="keyEvents">
+            <h2>Keyboard Events</h2>
+            <dd>Keyboard events occure when a key on the Keyboard is pressed or released</dd>
+            <h3>keydown event</h3>
+            <input type="text" id="myInput1" placeholder="Type something">
+            <h3>keyup event</h3>
+            <input type="text" id="myInput2" placeholder="Type something">
+        </div>
+        <div id="myForm">
+            <h2>Form Event</h2>
+            <dd>Form event is such event.In the Form events , we have two events .</dd>
+            <dd>1.Submit 2. Reset events</dd>
+            <h3>Submit event</h3>
+            <dd>Submit events are such events . It is used to submit the form</dd>
+            <h3>reset event</h3>
+            <dd>Reset event is such events in form events. when we click reset button , it will give empty form</dd><br>
+            <form id="form">
+                <label id="name">Name :</label>
+                <input type="text" placeholder="Enter your name" id="name" name="name"><br>
+                <label id="age">Age</label>
+                <input type="text" placeholder="Enter your age" id="age" name="age"><br>
+                <label>Phno</label>
+                <input type="number" pattern="^{1}[6-9]{9}[0-9]$" placeholder="Enter your Phone NUmber" ><br>
+                <button id="submit">Submit</button><br>
+                <button id="reset">Reset</button><br>
+                
+            </form>
+        </div>
+        <div id="onchange">
+            <h2>OnChange event</h2>
+            <dd>Onchange event is such event it triggered when the value of input element changes. It is commonly used with forms element like
+                text inputs, check boxes, an select boxes.
+            </dd>
+            <label for="myInput">Type Something</label>
+            <input type="text" id="myText">
+        </div>
+        <script>
+            //click events
+            var button=document.getElementById("myButton")
+            button.addEventListener("click",function()
+                {
+                    alert("button pressed");
+                }
+            );
+            //mouse events
+            var myElement = document.getElementById("MyMouseOver");
+            myElement.addEventListener("mouseover", function() {
+            // Code to execute when the mouse pointer enters the element
+            myElement.style.backgroundColor = "#a0a0a0";  // Change background color
+            myElement.innerHTML = "Mouse Over!";         // Change text
+        });
+        var mouseOut=document.getElementById("myMouseOut");
+        mouseOut.addEventListener("mouseout", function() {
+            // Code to execute when the mouse pointer leaves the element
+            mouseOut.style.backgroundColor = "#e0e0e0";  // Reset background color
+            mouseOut.innerHTML = "Hover over me";        // Reset text
+        });
+        //keyboard events
+        var input1=document.getElementById("myInput1");
+        input1.addEventListener("keydown",function(){
+            alert("key pressed :"+ event.key);
+        })
+        var input2=document.getElementById("myInput2");
+        input2.addEventListener("keyup",function(){
+            alert(" key pressed :"+ event.key);
+        });
+        //Forms events
+        var myForm=document.getElementById("myForm");
+        myForm.addEventListener("submit",function(event){
+            event.preventDefault();
+            var nameF=document.getElementById("name").value;
+            var ageF=document.getElementById("age").value;
+            alert(" Your submitted "+nameF+" "+ageF +"form submitted");
+        })
+        //Onchange event
+        var myInput=document.getElementById("myText");
+        myInput.onchange=function(){
+            alert("input value changed to :"+ myInput.value);
+        }
+         </script>
+    </body>
+</html>

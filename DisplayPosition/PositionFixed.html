@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Fixed Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #e74c3c;
+            padding: 20px;
+            background-color: #f2dede;
+        }
+
+        section {
+            height: 800px; /* Add some height to the section to enable scrolling */
+            background-color: #ecf0f1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Position: Fixed Example</h1>
+    </header>
+
+    <section>
+        <p>Scroll down to see the fixed-positioned box.</p>
+    </section>
+
+    <div class="fixed-box">
+        <p>This box has <code>position: fixed;</code>, so it stays fixed on the screen even when you scroll.</p>
+    </div>
+
+</body>
+</html>

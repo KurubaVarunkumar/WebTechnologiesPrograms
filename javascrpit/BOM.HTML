@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD><TITLE>BOM</TITLE></HEAD>
+    <BODY>
+        <h2>BOM</h2>
+        <p>
+            BOM is a core of javascrpit. It provides interaction with the browser.BOM stands for browser object model
+            It provides allowing manupulation of brower it self,location, navigation screen and more.
+        </p> 
+        <p>In BOM we have some objects there</p>  
+        <h2>1.Window object</h2>    
+        <p>Window object is one of the object in BOM.
+            This represents browsers window and contains proporties and methods for intercting with it. BY the using of this we can get window height and width</p> 
+            <h2>2.Screen Object</h2>
+        <p>Screen object is a object in BOM.It represents user's screen. It provides information such as 
+            height and width of the screen.
+        </p><br>
+        <h2>Location</h2>
+        <p>location object is a object. It represents the current url of browser</p>
+        <p>It allows navigation to different URLs</p>
+        <p id="screenH"></p>
+        <p id="screenW"></p>
+        <p id="screenAW"></p>
+        <p id="screenAH"></p>
+        <p id="=col"></p>
+        <p id="pix"></p>
+        <p id="locHref"></p>
+        <h2>History</h2>
+        <p>Hstory represents re brower History. It allows manipulation of the brosewr sessin history</p>
+        <input type="button" value="Go to previous url" onclick="goBack()">
+        <input type="button" value="Go to forward url" onclick="goforward()">
+        <h2>Navigation object</h2>
+        <p>Navigation object is a object in BOM. It provides information about browser and user system.Includes 
+            proporties such as the user agent,browser name and version
+        </p>
+        <p id="demo1"></p>
+        --------------------------------------------------------------------------------------------------------
+        <script>
+          document.write("By the using Window object ,window height is :" +window.innerHeight);
+          document.write("By hte using Window object ,window width is "+window.innerWidth);
+            document.getElementById("screenH").innerHTML="Screen Heigth "+screen.height;
+            document.getElementById("screenW").innerHTML="Screen width "+screen.width;
+            document.getElementById("screenAH").innerHTML="Screen width "+screen.availHeight;
+            document.getElementById("screenAW").innerHTML="Screen width "+screen.availWidth;
+           
+            document.getElementById("pix").innerHTML="Screen width "+screen.pixelDepth;
+            document.write(window.location.href);
+            document.write(window.location.hostname);
+            document.write(window.location.pathname);
+            document.write(window.location.protocol);
+            function goBack(){
+                history.back();
+            }
+            function goforward(){
+                history.forward();
+            }
+            //navigator property
+            console.log(navigator.cookieEnabled);
+            console.log(navigator.appName);
+            console.log(navigator.appCodeName);
+            console.log(navigator.product);
+            console.log(navigator.appVersion);
+            console.log(navigator.userAgent);
+        </script>
+
+
+    </BODY>
+</HTML>

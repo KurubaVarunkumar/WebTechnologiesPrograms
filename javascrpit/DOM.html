@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="dob">
+        <h1 id="heading"></h1>
+        <p id="demo"></p>
+        <h2 id="methods"></h2>
+        <h3 id="getElementById"></h3>
+        <p id="met1"></p>
+        <h3 id="getElementByClass"></h3>
+        <p id="met2"></p>
+        
+        </div>
+        <script>
+            // Get the element by its ID
+    var element = document.getElementById('dob');
+
+// Change the style using JavaScript
+element.style.width = "auto";
+element.style.height = '500px';
+element.style.backgroundColor = '#FFF78A';
+element.style.color = "black";
+element.style.padding = '10px';
+element.style.border = '2px solid';
+element.style.fontFamily = 'Arial, sans-serif';
+            document.getElementById("heading").innerHTML="Document Object Model";
+            document.getElementById("demo").innerHTML="Document object model is a object method and is also programing interface. This object model represent the stucuture of document and provides access to js to manupulate total structure of document, changing the elements, remove the elements, stytle for elements";
+            document.getElementById("methods").innerHTML="DOM Methods";
+            document.getElementById("getElementById").innerHTML="getElementById method";
+            document.getElementById("met1").innerHTML="getElementById is returns element with the specific ID";
+            document.getElementById("getElementByClass").innerHTML="getElementByClass method";
+            document.getElementById("met2").innerHTML="getElementByClass is returns  collection of element with the specific Class name";
+            var heading=document.createElement('h3');
+            heading.innerHTML="getElementByTagName";
+            dob.appendChild(heading);
+            // Create a new paragraph element
+            var para = document.createElement('p');
+            // Set some text content for the paragraph
+            para.textContent= "getElementByTagName method is a method . It returns colletions of elements with specific tag";
+            dob.appendChild(para);
+            //remove a child
+            // dob.removeChild(heading);\
+            //creating img 
+            var MyImage=document.createElement('img');
+            MyImage.setAttribute("src","ntr.jpng");
+            MyImage.style.width="300px";
+            MyImage.style.height="100px";
+            dob.appendChild(MyImage);
+        </script>
+    </body>
+</html>

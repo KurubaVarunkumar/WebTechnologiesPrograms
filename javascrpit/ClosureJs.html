@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            function outer(){
+                var str="i am varun";
+                function inner(){
+                    console.log(str);
+                }
+            return inner;
+            }
+        var aa=outer();
+        aa();
+        // function outerFunction() {
+        //     let outerVariable = "I am from the outer function";
+
+        //     function innerFunction() {
+        //         console.log(outerVariable);
+        //     }
+
+        //     return innerFunction;
+        //     }
+
+        //     // Create a closure by calling outerFunction
+        //     let closure = outerFunction();
+
+        //     // Call the inner function, which still has access to outerVariable
+        //     closure(); // Output: I am from the outer function
+
+        </script>
+    </body>
+</html>

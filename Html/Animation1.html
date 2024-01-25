@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Animation</title>
+       <style>
+           *{background-color: aqua}
+         p{
+        border:25px solid red;
+             height: 350px;
+             width: 350px;
+             animation: ani 5s infinite;
+             position: relative;
+        }
+           @keyframes ani{
+               0%{background-color:chartreuse ;
+                   border :25px solid red; 
+                   top: 0px;left:0px}
+               25%{background-color: darkcyan;
+                   border:25px dotted greenyellow;
+                   border-radius: 180px;    ; 
+                   top:0px;left:1000px }
+               50%{background-color: bisque;
+                   border:25px groove blue;
+                   top:1000px;left:1000px}
+                75%{background-color: bisque;
+                    border:25px dotted yellow;
+                    top:1000px;left:0px}
+                100%{background-color: bisque;
+                    border :25px solid red; 
+                    top: 0px;left:0px}
+
+
+           }
+        </style>
+    </head>
+    <body>
+    <p></p></body>
+</html>

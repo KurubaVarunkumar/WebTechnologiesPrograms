@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Static CSS Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .static-box {
+            position: static; /* Explicitly setting position to static */
+            border: 2px solid #3498db;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Position: Static CSS Example</h1>
+    </header>
+
+    <section>
+        <p>This is an example of an element with <code>position: static;</code></p>
+        <div class="static-box">
+            <p>This box has the position set to static, so it appears in the normal flow of the document.</p>
+        </div>
+        <p>Other content in the normal flow...</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="email">Email :</label>
+        <input type="text" id="email">
+        <button onclick="validEmail()">Valid Email</button>
+    
+    <script>
+        function validEmail(){
+        var email=document.getElementById('email').value;
+        var emailRegExp=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(emailRegExp.test(email)){
+            alert("Valid mail");
+        }else{
+            alert("not VAlid mail");
+        }
+    }
+    </script>
+    </body>
+</html>

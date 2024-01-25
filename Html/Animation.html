@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head><title>Animations in CSS</title>
+    <style>
+        p{border:5px dotted red;
+        height:300px;
+        width:300px;
+        background: yellow;
+        animation:ani 2s infinite;
+        border-radius:200px}
+        h1{
+            border:5px groove red;
+            height:300px;
+            width:300px;
+            background: yellow;
+            animation-name:ani;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            border-radius:200px
+        }
+        @keyframes ani{
+            from{background: red}
+            to{background: black}
+        }
+        </style></head>
+    <body>
+        <p></p>
+        <h1></h1>
+    </body>
+</html>

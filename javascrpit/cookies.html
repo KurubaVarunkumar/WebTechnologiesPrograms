@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            function getCookies(name){
+                var cookies=document.cookie.split(";");
+                for(var i=0;i<=cookies.length-1;i++){
+                    var cookie=cookies[i].split("=");
+                    if(cookie[0]==name){
+                        return cookies[1];
+                    }
+                }
+            }
+            var username=getCookies("username");
+        </script>
+    </body>
+</html>

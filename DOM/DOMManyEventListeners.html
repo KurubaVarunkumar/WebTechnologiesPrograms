@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <button id="mydate">Click me</button>
+        <h1 id="demo"></h1>
+        <script>
+            var d=document.getElementById("mydate");
+            d.addEventListener("click",displaydate);
+            d.addEventListener("click",another);
+            function displaydate(){
+                document.getElementById("demo").innerHTML=Date();
+            }
+            function another(){
+               alert("both functions completed");
+            //     setInterval(disDate,1000);
+            //     // function disDate(){
+            //     //     document.getElementById("demo").innerHTML=Date();
+            //     // } 
+            //     var currentDate = new Date();
+            // var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            // var formattedDate = currentDate.toLocaleDateString('en-US', options);
+            // document.getElementById('demo').textContent = formattedDate;
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Validation Example</title>
+</head>
+<body>
+
+<label for="name">Name:</label>
+<input type="text" id="name">
+<button onclick="validateName()">Validate Name</button>
+<p id="result"></p>
+
+<script>
+function validateName() {
+  // Get the value from the name input field
+  var name = document.getElementById('name').value.trim();
+
+  // Regular expression for name validation (alphabets and spaces only, minimum length 2)
+  var nameRegex = /^[A-Za-z\s]{2,}$/;
+
+  // Test if the name matches the regular expression
+  var isValid = nameRegex.test(name);
+
+  // Display the result
+  var resultElement = document.getElementById('result');
+  resultElement.textContent = isValid ? 'Valid name!' : 'Invalid name!';
+}
+</script>
+
+</body>
+</html>

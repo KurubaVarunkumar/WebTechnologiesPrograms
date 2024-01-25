@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Sticky Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            width: auto;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .static-box {
+            border: 2px solid #3498db;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 20px;
+            background-color: #f1c40f;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Position: Sticky Example</h1>
+    </header>
+
+    <section>
+        <p>This is an example of an element with <code>position: sticky;</code></p>
+
+        <div class="static-box">
+            <p>This box has the default position value (static), so it appears in the normal flow of the document.</p>
+        </div>
+
+        <div class="sticky-box">
+            <p>This box has <code>position: sticky;</code> with <code>top: 20px;</code>, so it becomes sticky when scrolling down.</p>
+        </div>
+
+        <p>Other content in the normal flow...</p>
+    </section>
+
+</body>
+</html>

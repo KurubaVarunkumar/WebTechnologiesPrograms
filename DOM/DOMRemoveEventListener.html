@@ -1,0 +1,29 @@
+<html>
+<head>
+    <style>
+        #myDiv {
+            height: 500px;
+            width: auto;
+            background-color: #7C3626;
+        }
+    </style>
+</head>
+<body>
+    <h2>Remove EventListener</h2>
+    <div id="myDiv"></div>
+    <p id="demo"></p>
+    <button onclick="removehandler()" id="bt">Remove myRandomNumber</button>
+
+    <script>
+        document.getElementById("myDiv").addEventListener("mousemove", myRandomNumber);
+
+        function myRandomNumber() {
+            document.getElementById("demo").innerHTML = Math.random();
+        }
+
+        function removehandler() {
+            document.getElementById("myDiv").removeEventListener("mousemove", myRandomNumber);
+        }
+    </script>
+</body>
+</html>
